@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mini CRM Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Client Lead Management System</h1>
+
+<form onsubmit="handleSubmit(event)">
+  <input type="text" id="name" placeholder="Enter name" required>
+  <input type="email" id="email" placeholder="Enter email" required>
+  <input type="text" id="phone" placeholder="Enter phone number">
+
+  <select id="source">
+    <option>Website</option>
+    <option>Instagram</option>
+    <option>LinkedIn</option>
+  </select>
+
+  <textarea id="message" placeholder="Enter requirement"></textarea>
+
+  <button type="submit">Send Message</button>
+</form>
+
+<a href="login.html">Admin Login</a>
+
+<script>
+function handleSubmit(event) {
+  event.preventDefault();
+
+  alert("✅ Demo Mode: Lead submitted successfully!");
+
+  // clear form
+  document.querySelector("form").reset();
+}
+</script>
+
+</body>
+</html>
